@@ -9,5 +9,5 @@ jobs:
       - name: Send Email Reminders
         run: |
           curl --request GET \
-          --url 'https://meetups-fawn.vercel.app/api/cron' \
+          --url 'https://meetups-git-dev-agrossio.vercel.app/api/cron' \
           --header 'Authorization: Bearer ${{ secrets.NEXTAUTH_SECRET }}'
