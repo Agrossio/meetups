@@ -17,7 +17,7 @@ export default async function handler(req, res) {
         try {
             const { authorization } = req.headers;
 
-            console.log("-----------------FUNCIONA_CRON_JOB---------------")
+            // console.log("-----------------FUNCIONA_CRON_JOB---------------")
 
             testEmail(user)
 
