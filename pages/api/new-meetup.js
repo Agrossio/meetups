@@ -24,7 +24,7 @@ async function handler(req, res) {
 
             const db = client.db();
 
-            const meetupsCollection = db.collection('meetups'); // de.collection recibe como parametro un string con el nombre de la coleccion
+            const meetupsCollection = db.collection('meetups'); // db.collection recibe como parametro un string con el nombre de la coleccion
 
             // insertOne es un command query para insertar un nuevo documento (que es un objeto) en la coleccion:
             const result = await meetupsCollection.insertOne(data)

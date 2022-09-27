@@ -1,0 +1,13 @@
+name: daily-cron
+on:
+  schedule:
+    - cron: "6 * * * *"
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Email Reminders
+        run: |
+          curl --request GET \
+          --url 'https://meetups-fawn.vercel.app/api/cron' \
+          --header 'Authorization: Bearer ${{ secrets.NEXTAUTH_SECRET }}'
